@@ -1,0 +1,11 @@
+//ОСНОВНЫЕ СТИЛИ
+@import "mixins.scss";
+@import "fonts";
+@import "reset_style.scss";
+@import "origin_style.scss";
+
+
+//ИНДИВИДУАЛЬНЫЕ
+@import "header/header.scss";
+@import "header/menu.scss";
+

@@ -1,0 +1,42 @@
+include mixins
+section.header
+    .container-fluid
+        .body-header
+            .wrapper-logo
+                a(href='#')
+                    img(src='img/logo-header.svg')
+
+
+            .wrapper-menu
+                ul.menu
+                    +li_menu('#','Стоимость')
+                    +li_menu('#','Услуги')
+                    +li_menu('#','Порядок работ')
+                    +li_menu('#','Состав проекта')
+                    +li_menu('#','Контакты')
+                    li.li-second-level-menu.link-menu ...
+                        ul.ul-second-level-menu
+                            li.link-menu-second-level
+                                a(href='#') Порядок работ
+                            li.link-menu-second-level
+                                a(href='#') Порядок работ  на работе
+
+
+                    .wrapper-phone.MOBILE
+                        .wrapper-phone__mobile
+                            a(href='tel:+7(918)360-24-52').wrapper-phone__link +7(918)360-24-52
+
+                        .wrapper-phone__whatsapp
+                            a(href='tel:+7(918)460-24-11').wrapper-phone__link +7(918)460-24-11
+
+            .wrapper-gamburger.MOBILE
+                button.cmn-toggle-switch.cmn-toggle-switch__htx
+                    span toggle menu
+
+
+            .wrapper-phone.DESCKTOP
+                .wrapper-phone__mobile
+                    a(href='tel:+7(918)360-24-52').wrapper-phone__link +7(918)360-24-52
+
+                .wrapper-phone__whatsapp
+                    a(href='tel:+7(918)460-24-11').wrapper-phone__link +7(918)460-24-11

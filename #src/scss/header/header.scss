@@ -1,0 +1,25 @@
+.header{
+  padding: 6px 0;
+  @include mq('tablet-990') {
+    padding: 10px 0;
+  }
+}
+
+.body-header{
+  @extend %flex;
+  justify-content: space-between;
+  @include mq('tablet-990') {
+    padding: 0 40px;
+  }
+}
+
+.wrapper-logo{
+  flex: 0 0 180px;
+  img{
+    width: 100%;
+  }
+}
+
+.wrapper-phone{
+  align-self: center;
+}
