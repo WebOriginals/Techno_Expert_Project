@@ -47,7 +47,6 @@ body {
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -133,10 +132,14 @@ h6 {
   text-align: center;
   padding: 24px 32px;
   cursor: pointer;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
   transition: .5s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   font-family: 'a-futurica-extrabold', sans-serif;
-  font-size: calc(10px + 10 * ((100vw - 320px) / 1600));
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
   font-weight: 800;
 }
 
@@ -147,7 +150,7 @@ h6 {
   -moz-box-shadow: 0px 0px 19px 12px rgba(249, 183, 15, 0.15);
 }
 
-.button:focus {
+.button:active {
   background: #edae0e;
 }
 
@@ -175,9 +178,13 @@ h6 {
   font-family: 'a-futurica-extrabold', sans-serif;
 }
 
-.body-header {
+.body-header,
+.body-first-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
@@ -208,15 +215,23 @@ h6 {
 }
 
 .header {
+  position: absolute;
+  width: 100%;
   padding: 6px 0;
+  z-index: 990;
 }
 
 .body-header {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .wrapper-logo {
-  flex: 0 0 180px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 90px;
+          flex: 0 0 90px;
+  z-index: 901;
 }
 
 .wrapper-logo img {
@@ -224,7 +239,27 @@ h6 {
 }
 
 .wrapper-phone {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-family: 'OpenSansCondensed-Bold', sans-serif;
+}
+
+.wrapper-phone a {
+  font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.wrapper-phone__mobile {
+  padding: 3px;
+  padding-left: 30px;
+  margin-bottom: 7px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.wrapper-phone__mobile:last-child {
+  margin-bottom: 0;
 }
 
 .no-scroll {
@@ -232,13 +267,57 @@ h6 {
   overflow: hidden;
 }
 
+.first-screen {
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.first-screen:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(13, 18, 28, 0.52);
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.body-first-screen {
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.wrapper-first-screen {
+  color: #FFFFFF;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.wrapper-first-screen span {
+  color: #F9B70F;
+}
+
+.body-first-screen__title {
+  line-height: 38px;
+  margin-bottom: calc(20px + 25 * ((100vw - 320px) / 1600));
+}
+
+.body-first-screen__subtitle {
+  margin-bottom: calc(40px + 5 * ((100vw - 320px) / 1600));
+}
+
 @media only screen and (min-width: 990px) {
   .header {
     padding: 10px 0;
   }
 
-  .body-header {
-    padding: 0 40px;
+  .wrapper-logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 180px;
+            flex: 0 0 180px;
   }
 }
 
@@ -246,13 +325,26 @@ h6 {
   .POLITICS {
     margin-top: 25px;
   }
+
+  .body-first-screen__title {
+    line-height: 81px;
+  }
 }
 
 @media only screen and (min-width: 1151px) {
+  .menu-mobile {
+    display: none !important;
+  }
+
   .wrapper-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 
   .link-menu {
@@ -269,6 +361,7 @@ h6 {
     font-size: calc(16px + 0 * ((100vw - 320px) / 1600));
     font-family: 'a-futurica-extrabold', sans-serif;
     font-weight: 800;
+    color: #FFFFFF;
   }
 
   .link-menu:hover {
@@ -305,7 +398,6 @@ h6 {
   .show-menu-btn {
     -webkit-transition: .4s;
     -o-transition: .4s;
-    -moz-transition: .4s;
     transition: .4s;
     font-size: 30px;
     cursor: pointer;
@@ -316,14 +408,13 @@ h6 {
     position: relative;
     line-height: normal;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-left: 0;
     margin: 0;
   }
@@ -345,6 +436,12 @@ h6 {
   }
 }
 
+@media only screen and (min-width: 1300px) {
+  .body-header {
+    padding: 0 40px;
+  }
+}
+
 @media only screen and (max-width: 1150px) {
   /*кнопка меню*/
 
@@ -359,12 +456,16 @@ h6 {
     z-index: 1001;
     text-indent: -9999px;
     margin: 10px;
-    appearance: none;
-    box-shadow: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border-radius: none;
     border: none;
     cursor: pointer;
     -webkit-transition: background 0.3s;
+    -o-transition: background 0.3s;
     transition: background 0.3s;
   }
 
@@ -376,20 +477,30 @@ h6 {
     display: block;
     position: absolute;
     top: 13px;
-    left: 0px;
     right: 0px;
     height: 3px;
-    background: #26356B;
+    background: #FFFFFF;
+    width: 70%;
   }
 
-  .cmn-toggle-switch span::before,
+  .cmn-toggle-switch span::before {
+    position: absolute;
+    display: block;
+    right: 0;
+    width: 130%;
+    height: 3px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    content: "";
+  }
+
   .cmn-toggle-switch span::after {
     position: absolute;
     display: block;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 40%;
     height: 3px;
-    background-color: #26356B;
+    background-color: #FFFFFF;
     border-radius: 5px;
     content: "";
   }
@@ -408,25 +519,34 @@ h6 {
 
   .cmn-toggle-switch__htx span {
     -webkit-transition: background 0 0.3s;
+    -o-transition: background 0 0.3s;
     transition: background 0 0.3s;
   }
 
   .cmn-toggle-switch__htx span::before,
   .cmn-toggle-switch__htx span::after {
     -webkit-transition-duration: 0.3s, 0.3s;
-    transition-duration: 0.3s, 0.3s;
+    -o-transition-duration: 0.3s, 0.3s;
+       transition-duration: 0.3s, 0.3s;
     -webkit-transition-delay: 0.3s, 0;
-    transition-delay: 0.3s, 0;
+    -o-transition-delay: 0.3s, 0;
+       transition-delay: 0.3s, 0;
   }
 
   .cmn-toggle-switch__htx span::before {
     -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, -webkit-transform;
+    -o-transition-property: top, transform;
     transition-property: top, transform;
+    transition-property: top, transform, -webkit-transform;
   }
 
   .cmn-toggle-switch__htx span::after {
     -webkit-transition-property: bottom, -webkit-transform;
+    transition-property: bottom, -webkit-transform;
+    -o-transition-property: bottom, transform;
     transition-property: bottom, transform;
+    transition-property: bottom, transform, -webkit-transform;
   }
 
   .cmn-toggle-switch__htx.active span {
@@ -435,6 +555,7 @@ h6 {
 
   .cmn-toggle-switch__htx.active span::before {
     top: 0;
+    width: 100%;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -442,6 +563,10 @@ h6 {
 
   .cmn-toggle-switch__htx.active span::after {
     bottom: 0;
+    width: 100%;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -450,7 +575,8 @@ h6 {
   .cmn-toggle-switch__htx.active span::before,
   .cmn-toggle-switch__htx.active span::after {
     -webkit-transition-delay: 0, 0.3s;
-    transition-delay: 0, 0.3s;
+    -o-transition-delay: 0, 0.3s;
+       transition-delay: 0, 0.3s;
   }
 
   /*конец кнопки*/
@@ -478,7 +604,6 @@ h6 {
   .link-menu {
     -webkit-transition: .4s;
     -o-transition: .4s;
-    -moz-transition: .4s;
     transition: .4s;
     display: block;
     padding: 10px 20px;
@@ -514,16 +639,45 @@ h6 {
     background: white;
     z-index: 901;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .wrapper-gamburger {
+    position: absolute;
+    right: 0;
+  }
+
+  .menu.menu-desctop {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 990px) {
   .BLOCK-SCROLL_WIDTH {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding: 0 15px 0 0;
+  }
+}
+
+@media only screen and (max-width: 989px) {
+  .body-first-screen__title {
+    text-align: center;
+  }
+
+  .body-first-screen__subtitle {
+    text-align: center;
+  }
+
+  .body-first-screen__btn {
+    margin: auto;
   }
 }
 

@@ -3,30 +3,40 @@ section.header
     .container-fluid
         .body-header
             .wrapper-logo
-                a(href='#')
+                a(href='/')
                     img(src='img/logo-header.svg')
 
 
             .wrapper-menu
-                ul.menu
+                ul.menu.menu-desctop
                     +li_menu('#','Стоимость')
                     +li_menu('#','Услуги')
                     +li_menu('#','Порядок работ')
                     +li_menu('#','Состав проекта')
                     +li_menu('#','Контакты')
-                    li.li-second-level-menu.link-menu ...
+                    li.li-second-level-menu.link-menu
+                        a(href='#') ...
                         ul.ul-second-level-menu
                             li.link-menu-second-level
                                 a(href='#') Порядок работ
                             li.link-menu-second-level
                                 a(href='#') Порядок работ  на работе
 
+                ul.menu.menu-mobile
+                    +li_menu('#','Стоимость')
+                    +li_menu('#','Услуги')
+                    +li_menu('#','Порядок работ')
+                    +li_menu('#','Состав проекта')
+                    +li_menu('#','Состав проекта')
+                    +li_menu('#','Состав проекта')
+                    +li_menu('#','Контакты')
+
 
                     .wrapper-phone.MOBILE
-                        .wrapper-phone__mobile
+                        .wrapper-phone__mobile(style='background-image: url("img/phote.svg");')
                             a(href='tel:+7(918)360-24-52').wrapper-phone__link +7(918)360-24-52
 
-                        .wrapper-phone__whatsapp
+                        .wrapper-phone__mobile(style='background-image: url("img/whatsaap.svg");')
                             a(href='tel:+7(918)460-24-11').wrapper-phone__link +7(918)460-24-11
 
             .wrapper-gamburger.MOBILE
@@ -35,8 +45,8 @@ section.header
 
 
             .wrapper-phone.DESCKTOP
-                .wrapper-phone__mobile
+                .wrapper-phone__mobile(style='background-image: url("img/phote.svg");')
                     a(href='tel:+7(918)360-24-52').wrapper-phone__link +7(918)360-24-52
 
-                .wrapper-phone__whatsapp
+                .wrapper-phone__mobile(style='background-image: url("img/whatsaap.svg");')
                     a(href='tel:+7(918)460-24-11').wrapper-phone__link +7(918)460-24-11

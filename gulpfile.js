@@ -39,7 +39,7 @@ let {src, dest} = require('gulp'),
     scss = require('gulp-sass'),
     pug = require('gulp-pug'),
     stripCssComments = require('gulp-strip-css-comments'),
-    //autoprefixer = require('gulp-autoprefixer'),
+    autoprefixer = require('gulp-autoprefixer'),
     group_media = require('gulp-group-css-media-queries'),
     clean_css = require('gulp-clean-css'),
     uglify = require('gulp-uglify-es').default,
@@ -82,9 +82,9 @@ function css() {
         .pipe(
             group_media()
         )
-        // .pipe(
-        //  autoprefixer("last 10 version", ">1%", "ie 9")
-        //  )
+         .pipe(
+          autoprefixer("last 10 version", ">1%", "ie 9")
+          )
         //.pipe(webpcss())
         .pipe(dest(path.build.css))
         .pipe(clean_css())

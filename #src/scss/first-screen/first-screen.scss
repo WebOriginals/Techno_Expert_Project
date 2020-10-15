@@ -1,0 +1,51 @@
+.first-screen{
+  background: no-repeat center center;
+  background-size: cover;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 18, 28, 0.52);
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+}
+.body-first-screen{
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  @extend %flex;
+
+}
+.wrapper-first-screen{
+  color: $color2;
+  span{
+    color: $color1;
+  }
+  align-self: center;
+}
+.body-first-screen__title{
+  line-height: 38px;
+
+  @include adaptiv-margin-bottom(45,20);
+  @include mq('tablet-wide') {
+    line-height: 81px;
+  }
+  @include maq('tablet-990') {
+    text-align: center;
+  }
+}
+.body-first-screen__subtitle{
+  @include adaptiv-margin-bottom(45,40);
+  @include maq('tablet-990') {
+    text-align: center;
+  }
+}
+.body-first-screen__btn{
+  @include maq('tablet-990') {
+    margin: auto;
+  }
+}

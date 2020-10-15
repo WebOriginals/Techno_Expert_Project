@@ -26,19 +26,29 @@
     display: block;
     position: absolute;
     top: 13px;
-    left: 0px;
     right: 0px;
     height: 3px;
-    background: #26356B;
+    background: $color2;
+    width: 70%;
   }
-  .cmn-toggle-switch span::before,
+  .cmn-toggle-switch span::before{
+    position: absolute;
+    display: block;
+    right: 0;
+    width:130%;
+    height: 3px;
+    background-color: $color2;
+    border-radius: 5px;
+    content: "";
+  }
+
   .cmn-toggle-switch span::after {
     position: absolute;
     display: block;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 40%;
     height: 3px;
-    background-color: #26356B;
+    background-color: $color2;
     border-radius: 5px;
     content: "";
   }
@@ -75,12 +85,15 @@
   }
   .cmn-toggle-switch__htx.active span::before {
     top: 0;
+    width: 100%;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   .cmn-toggle-switch__htx.active span::after {
     bottom: 0;
+    width: 100%;
+    transition: .5s;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -157,9 +170,19 @@
     display: flex;
     justify-content: flex-end;
   }
+  .wrapper-gamburger{
+    position: absolute;
+    right: 0;
+  }
+  .menu.menu-desctop{
+    display: none ;
+  }
 }
 
 @media only screen and (min-width: 1151px) {
+  .menu-mobile{
+      display: none !important;
+  }
 
 
   .wrapper-menu {
@@ -179,7 +202,7 @@
       @include adaptiv-font(16,16);
       font-family: 'a-futurica-extrabold', sans-serif;
       font-weight: 800;
-     // color: $color2;
+      color: $color2;
     }
     &:hover{
       border-bottom: 3px solid $color1;
