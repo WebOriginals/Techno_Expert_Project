@@ -2,3 +2,27 @@
 mixin li_menu(link, title)
     li.link-menu
         a(href= link)= title
+
+//- миксин почему клиенты выбирают нас
+mixin why-choose-us__elem(title)
+    .col-12.col-md-6
+        .why-choose-us__elem= title
+
+//- миксин 6 step
+mixin six-step(number,title, text )
+    .body-six-step__items
+        .body-six-step__number
+            span.sub-title-bold18= number
+        .body-six-step__title.sub-title-bold18=title
+        .body-six-step__text= text
+
+//- миксин Состав проекта
+mixin project-structure__column(title, subtitle, text )
+    .project-structure__column
+        .project-structure__column-title= title
+        .project-structure__column-subtitle= subtitle
+        .project-structure__column-text= text
+
+
+
+

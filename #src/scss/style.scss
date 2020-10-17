@@ -1,7 +1,7 @@
 //ОСНОВНЫЕ СТИЛИ
 @import "mixins.scss";
-@import "fonts";
 @import "reset_style.scss";
+@import "fonts";
 @import "origin_style.scss";
 
 
@@ -13,4 +13,22 @@
 
 //Первый экран
 @import "first-screen/first-screen.scss";
+
+//Второй экран
+@import "who-we-work/who-we-work.scss";
+
+//Третий экран
+@import "why-choose-us/why-choose-us.scss";
+
+//Четвертый экран
+@import "What-we-design/What-we-design.scss";
+
+//Пятый экран
+@import "six-steps/six-steps.scss";
+
+//Шестой экран
+@import "project-structure/project-structure.scss";
+
+//Седьмой экран
+@import "our-specialist/our-specialist.scss";
 

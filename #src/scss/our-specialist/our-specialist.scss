@@ -1,0 +1,247 @@
+.our-specialist {
+  padding: 50px 0;
+  @include mq('tablet-wide') {
+    padding: 125px 0;
+  }
+}
+
+.our-specialist__title {
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 180px;
+  @include maq('tablet-wide') {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 5px;
+    background: $color1;
+    z-index: 9;
+
+  }
+
+  @include mq('tablet-wide') {
+    padding-bottom: 25px;
+    margin-bottom: 120px;
+    &:after {
+      width: 150px;
+    }
+  }
+}
+
+.row-specialist-items {
+  @extend %flex;
+  position: relative;
+  padding: 3px 0;
+  .our-specialist__bg-img{
+    @include maq('tablet-wide') {
+      position: absolute;
+      width: 70%;
+      height: 3px;
+      bottom: 0;
+      right: 0;
+      left: -34%;
+      background: linear-gradient(to right, transparent 60%, #fff 40%),
+      linear-gradient(to right, $color1);
+      background-size: 16px 2px, 100% 2px;
+    }
+  }
+
+  @include maq('tablet-wide') {
+    padding: 3px 15px;
+    margin-bottom: 100px;
+    justify-content: center;
+    .wrapper-description {
+      text-align: center;
+
+    }
+  }
+  @include mq('tablet-wide') {
+    margin-bottom: 40px;
+
+    &:after {
+      content: '';
+      width: 3px;
+      height: 120%;
+      position: absolute;
+      right: 0;
+      top: -8%;
+      background: $color1;
+    }
+    &:before {
+      content: '';
+      height: 3px;
+      width: 70%;
+      position: absolute;
+      right: -3%;
+      bottom: 0;
+      background: $color1;
+    }
+  }
+  .wrapper-image__img {
+    @include maq('tablet-wide') {
+      &:after {
+        content: '';
+        width: 3px;
+        height: 108%;
+        position: absolute;
+        right: 0;
+        top: 0%;
+        background: $color1;
+      }
+      &:before {
+        content: '';
+        height: 3px;
+        width: 70%;
+        position: absolute;
+        right: -3%;
+        bottom: 0;
+        background: $color1;
+      }
+    }
+  }
+}
+
+.wrapper-image__img {
+  width: 190px;
+  height: 280px;
+  background: no-repeat center center;
+  background-size: cover;
+  @include mq('tablet-wide') {
+    width: 270px;
+    height: 400px;
+    margin-left: auto;
+  }
+}
+
+.wrapper-description {
+  position: relative;
+  @include mq('tablet-wide') {
+    align-self: center;
+    width: 60%;
+
+  }
+  @include maq('tablet-wide') {
+    order: 2
+  }
+}
+
+.wrapper-image {
+  position: relative;
+
+  @include mq('tablet-wide') {
+    width: 40%;
+
+  }
+  @include maq('tablet-wide') {
+    order: 1
+  }
+
+}
+
+.specialist-items-description__title {
+  margin-bottom: 20px;
+  @include maq('tablet-wide') {
+    margin-top: 30px;
+  }
+  @include mq('tablet-wide') {
+    margin-bottom: 30px;
+  }
+}
+.our-specialist__bg{
+  @include mq('tablet-wide') {
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    bottom: 0;
+    left: 8%;
+    background: linear-gradient(to right, transparent 60%, #fff 40%),
+    linear-gradient(to right, $color1);
+    background-size: 16px 2px, 100% 2px;
+  }
+}
+.row-specialist-items-revers{
+  .our-specialist__bg-img{
+    @include maq('tablet-wide') {
+      position: absolute;
+      width: 70%;
+      height: 3px;
+      bottom: 0;
+      right: 0;
+      left: 62%;
+      background: linear-gradient(to right, transparent 60%, #fff 40%),
+      linear-gradient(to right, $color1);
+      background-size: 16px 2px, 100% 2px;
+    }
+  }
+  .wrapper-image__img {
+    @include mq('tablet-wide') {
+      margin-right: auto;
+      margin-left: 0;
+    }
+    @include maq('tablet-wide') {
+      &:after {
+        content: '';
+        width: 3px;
+        height: 108%;
+        position: absolute;
+        left: 0;
+        top: 0%;
+        background: $color1;
+      }
+      &:before {
+        content: '';
+        height: 3px;
+        width: 70%;
+        position: absolute;
+        left: -3%;
+        bottom: 0;
+        background: $color1;
+      }
+
+    }
+  }
+
+  @include mq('tablet-wide') {
+    &:after {
+      content: '';
+      width: 3px;
+      height: 120%;
+      position: absolute;
+      left: 0;
+      top: -8%;
+      background: $color1;
+    }
+    &:before {
+      content: '';
+      height: 3px;
+      width: 70%;
+      position: absolute;
+      left: -3%;
+      bottom: 0;
+      background: $color1;
+    }
+  }
+  .our-specialist__bg{
+    @include mq('tablet-wide') {
+      position: absolute;
+      width: 30%;
+      height: 3px;
+      bottom: 0;
+      right: 0;
+      left: 52%;
+      background: linear-gradient(to right, transparent 60%, #fff 40%),
+      linear-gradient(to right, $color1);
+      background-size: 16px 2px, 100% 2px;
+    }
+  }
+}

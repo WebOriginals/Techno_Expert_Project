@@ -1,0 +1,54 @@
+.who-we-work{
+  padding: 80px 0 50px;
+  @include mq('tablet-wide') {
+    padding: 200px 0 125px;
+  }
+}
+.body-who-we-work{
+  @extend %flex;
+}
+.who-we-work-sec__column-img{
+  width: 100%;
+  min-height: 185px;
+  background-size: cover;
+  @include mq('tablet-wide') {
+    height: 100%;
+  }
+
+}
+.wrapper-row-who-we-work{
+  @extend %flex;
+  @include adaptiv-margin-bottom(100,40);
+}
+.who-we-work__title{
+  @include adaptiv-margin-bottom(100,60);
+}
+.who-we-work-sec__column-title{
+  padding-bottom: 10px;
+  border-bottom: 5px solid $color1;
+  width: fit-content;
+  @include adaptiv-margin-bottom(50,20);
+}
+.who-we-work-sec__column-text{
+  line-height: 1.6;
+  @include maq('tablet') {
+    text-align: center;
+  }
+}
+.who-we-work-sec__column-description{
+   padding: 30px 0 0;
+  @include mq('tablet') {
+    padding: 30px 0;
+  }
+}
+.wrapper-row-who-we-work-revers{
+
+  @include maq('tablet') {
+    .block-text{
+      order: 2;
+    }
+    .block-img{
+      order: 1;
+    }
+  }
+}
