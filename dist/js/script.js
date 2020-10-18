@@ -16,3 +16,26 @@ if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
         $(items).toggleClass("ul-second-level-menu-visible");
     });
 }
+var swiper = new Swiper('.slider-databases-ready-made-container', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    centeredSlides: true,
+    navigation: {
+        nextEl: '.databases-ready-made-button-next',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        767: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        }
+    }
+});
+var swiper = new Swiper('.our-partner-container', {
+    pagination: {
+        el: '.swiper-pagination',
+    },
+});

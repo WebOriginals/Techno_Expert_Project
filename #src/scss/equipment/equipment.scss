@@ -1,0 +1,32 @@
+.equipment{
+  padding: 50px 0;
+  @include mq('tablet-wide') {
+    padding: 125px 0;
+  }
+}
+.equipment__title{
+  @include adaptiv-margin-bottom(140,65);
+}
+.equipment-description{
+  position: relative;
+  padding: 10px 0 0 45px;
+  @include adaptiv-margin-bottom(110,46);
+
+
+  &:after{
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: $color1;
+    position: absolute;
+    left: 15px;
+    top: 0;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.equipment-description__title{
+  text-transform: uppercase;
+  @include adaptiv-margin-bottom(30,20);
+}

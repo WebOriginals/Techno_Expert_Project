@@ -1,0 +1,9 @@
+.contacts{
+  padding: 50px 0;
+  @include mq('tablet-wide') {
+    padding: 125px 0;
+  }
+}
+.contacts__title{
+
+}
