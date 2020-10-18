@@ -5,5 +5,85 @@
   }
 }
 .contacts__title{
+  margin-bottom: 65px;
+  @include mq('tablet-wide') {
+    margin-bottom: 140px;
+  }
+}
 
+.body-contacts__map{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  @include mq('tablet-wide') {
+    height: 600px;
+  }
+}
+#map{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+
+.body-contacts__tile{
+  padding-left: 40px;
+  background:  no-repeat left center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  &:not(:first-child){
+    margin-top: 45px;
+  }
+
+}
+.body-contacts__subtile{
+  background:  no-repeat left center;
+  padding-left: 40px;
+}
+
+//ЧБ цвет на карте
+[class*="ymaps-2"][class*="-ground-pane"] {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  /* Firefox 3.5+ */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */
+}
+.body-contacts{
+  @extend %flex;
+
+}
+.body-contacts__info{
+  background: $color1;
+  padding: 30px 25px;
+  width: 100%;
+  @include mq('tablet-wide') {
+    width: 30%;
+    padding: 70px 40px;
+  }
+  a{
+    color: black;
+  }
+}
+.body-contacts__map{
+  width: 100%;
+  @include mq('tablet-wide') {
+    width: 70%;
+  }
+}
+.body-contacts__subtile-phone{
+  margin-left: 45px;
+  margin-bottom: 10px;
+  &:last-child{
+    margin-bottom: 0px;
+  }
+}
+
+.body-contacts__soc{
+  margin-top: 25px;
+  @include mq('tablet-wide') {
+    margin-top: 90px;
+    a{
+      margin-right: 20px;
+    }
+  }
 }
