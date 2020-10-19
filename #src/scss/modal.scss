@@ -1,127 +1,86 @@
-$bg_btn: #0EBAB9;
-$color_btn: white;
-$bg_btn-hover: #0d2839;
-
-.MODAL-NAME-DIALOG {
-
-  @include mq('desktop') {
-    max-width: 640px;
-  }
-}
-
-
-.WRAPPER-BTN-MODAL-NAME {
-  text-align: center;
-}
-
-.BTN-MODAL-NAME-CLOSES {
+.close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 90;
-  font-weight: 400;
-  font-size: 2.5rem;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
   outline: none;
   border: none;
-  margin: -2rem -1.5rem -1rem auto !important;
-
-  &:active,
-  &:focus {
-    outline: none;
-    border: none;
-  }
-
-  span {
-    color: black;
-  }
-}
-
-.MODAL-NAME-TITLE {
-  margin: 0 auto !important;
-  @include adaptiv-font(36, 26);
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2;
-
-}
-
-.MODAL-NAME-SUBTITLE {
-  margin: 0 auto !important;
-  @include adaptiv-font(21, 16);
-
-}
-
-.HEADER-MODAL-NAME {
-  border: none;
-  flex-wrap: wrap;
-  padding: 30px 20px 0;
-
+  &:active,&:focus{outline: none;border: none;}
   @include mq('tablet-wide') {
-    padding: 30px 45px 0;
+    top: 30px;
+    right: 30px;
   }
 }
 
-.MODAL-NAME-BODY {
-  padding: 30px 20px ;
+.modal-body {
+  padding: 40px 17px;
+  border: 2px solid $color1;
   @include mq('tablet-wide') {
-    padding: 50px 50px 30px;
+    padding: 80px 70px;
   }
-
 }
 
-.MODAL-NAME {
-  input,
-  textarea {
-    margin-bottom: 1rem;
+.modal-dialog {
+  @include mq('tablet-wide') {
+    max-width: 1170px;
   }
-  input {
-    border-bottom: 2px solid #BDBDBD;
-    padding: 10px 5px 0 0;
+}
+
+.modal-title {
+  margin-bottom: 20px;
+  @include maq('tablet-wide') {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include mq('tablet-wide') {
+    margin-bottom: 50px;
+  }
+}
+
+.form-modal__input {
+  border: 1px solid $color1;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  margin-right: 0;
+  width: 100%;
+  @include mq('tablet-wide') {
+    margin-bottom: 50px;
+  }
+}
+
+.form-modal__btn {
+  margin-top: 20px;
+  @include maq('tablet-wide') {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include mq('tablet-wide') {
+    margin-top: 50px;
+  }
+}
+
+.wrapper-modal-input {
+  width: 100%;
+  @include mq('tablet-wide') {
+    width: 50%;
+    &:nth-child(odd) {
+      padding-right: 70px;
+    }
+  }
+}
+
+.form-modal {
+  @extend %flex;
+
+  p {
+    @include adaptiv-font(24, 14);
+    color: rgba(2, 2, 2, 0.6);
     width: 100%;
-    @include adaptiv-margin-bottom(26, 20);
 
-    &::placeholder {
-      color: #BDBDBD;
-      @include adaptiv-font(21, 16);
-    }
-
-    &:active,
-    &:focus {
-      border-bottom: 2px solid #000;
+    a {
+      color: rgba(2, 2, 2, 0.6);
+      border-bottom: 1px dotted $color1;
     }
   }
-}
-
-.BTN-MODAL-NAME {
-  cursor: pointer;
-  background-color: $bg_btn;
-  color: $color_btn;
-  width: 230px;
-  transition: 1s;
-  padding: 10px 15px;
-  text-transform: uppercase;
-  font-weight: bold;
-  position: relative;
-  margin: auto;
-  font-size: 16px;
-
-
-  &:hover {
-    color: $color_btn;
-    background: $bg_btn-hover;
-  }
-
-  @include mq('tablet-wide') {
-    width: 250px;
-    padding: 10px 38px;
-  }
-}
-
-.POLITICS-MODAL-NAME {
-  line-height: 1;
-  font-size: 14px;
-}
-
-.WRAPPER-BTN-MODAL-NAME_PADDING {
-  padding-top: 2rem;
 }

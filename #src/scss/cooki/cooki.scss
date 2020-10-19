@@ -1,0 +1,23 @@
+.cooki{
+  position: fixed;
+  bottom: 15px;
+
+  z-index: 9;
+  width: 100%;
+}
+.body-cooki{
+  @extend %flex;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 35px 30px;
+  justify-content: space-between;
+  p{
+    margin-bottom: 0;
+  }
+}
+.cooki__btn{
+  padding: 12px 34px;
+}

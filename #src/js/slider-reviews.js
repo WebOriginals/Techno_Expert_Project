@@ -1,9 +1,9 @@
-var swiper = new Swiper('.slider-databases-ready-made-container', {
+var swiper = new Swiper('.reviews-container', {
     slidesPerView: 1,
     spaceBetween: 30,
     centeredSlides: true,
     navigation: {
-        nextEl: '.databases-ready-made-button-next',
+        nextEl: '.reviews-button-next',
     },
     breakpoints: {
         320: {
@@ -13,6 +13,10 @@ var swiper = new Swiper('.slider-databases-ready-made-container', {
         767: {
             slidesPerView: 2.5,
             spaceBetween: 30
-        }
+        },
+        1440: {
+            slidesPerView: 3.5,
+            spaceBetween: 30
+        },
     }
 });

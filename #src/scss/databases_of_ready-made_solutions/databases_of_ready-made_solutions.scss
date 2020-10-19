@@ -39,6 +39,7 @@
     }
   }
   .slider-databases-ready-made-slide__img{
+    position: relative;
     width: 100%;
     height: 100%;
     background: no-repeat center center;
@@ -83,7 +84,16 @@
     }
   }
 }
+.slider-databases-ready-made-slide__arm{
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  display: none;
+}
 .swiper-slide-active {
+  .slider-databases-ready-made-slide__arm{
+    display: block;
+  }
   .slider-databases-ready-made-slide__description{
     display: block;
   }
@@ -91,6 +101,15 @@
     box-shadow:0px 0px 8px 6px rgba(0,0,0,0.07);
     -webkit-box-shadow:0px 0px 8px 6px rgba(0,0,0,0.07);
     -moz-box-shadow:0px 0px 8px 6px rgba(0,0,0,0.07);
+  }
+  .slider-databases-ready-made-slide__img:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 18, 28, 0.22);
+    left: 0px;
+    top: 0px;
   }
 
 }
@@ -131,3 +150,5 @@
     margin: auto;
   }
 }
+
+

@@ -238,6 +238,7 @@
     left: 8%;
     background: linear-gradient(to right, transparent 60%, #fff 40%),
     linear-gradient(to right, $color1);
+   // background: repeating-linear-gradient(45deg, #fff, #fff 10px, $color1 10px, $color1 20px);
     background-size: 16px 2px, 100% 2px;
   }
 }

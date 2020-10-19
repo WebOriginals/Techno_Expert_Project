@@ -1,4 +1,5 @@
 @@include('menu.js')
 @@include('slider-databases-ready-made.js')
+@@include('slider-reviews.js')
 @@include('slider-our-partner.js')
 @@include('map.js')

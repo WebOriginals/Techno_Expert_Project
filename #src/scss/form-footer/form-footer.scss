@@ -1,0 +1,48 @@
+.form-footer{
+  padding: 50px 0;
+  @include mq('tablet-wide') {
+    padding: 125px 0;
+  }
+}
+.body-form-footer{
+  @extend %flex;
+  a{
+    color: rgba(2, 2, 2, 0.6);
+    border-bottom: 1px dotted $color1;
+  }
+  .copirite{
+    font-size: 14px;
+    color: rgba(2, 2, 2, 0.6);
+  }
+
+}
+.form-footer__title{
+  margin-bottom: 50px;
+  @include mq('tablet-wide') {
+    margin-bottom: 100px;
+  }
+}
+.form-footer__input{
+  width: 100%;
+  border: 1px solid $color1;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.form-footer__btn{
+  display: block;
+  @include maq('tablet-wide') {
+    display: none;
+    margin: auto auto 30px auto;
+  }
+}
+.form-footer__btn-mobile{
+  display: none;
+  @include maq('tablet-wide') {
+    display: block;
+    margin: 30px auto auto  auto;
+  }
+}
+

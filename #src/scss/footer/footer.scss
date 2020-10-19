@@ -1,0 +1,70 @@
+.footer{
+  padding: 20px 15px;
+  border-top: 2px solid $color1;
+  @include mq('tablet-wide') {
+    padding: 30px 30px;
+  }
+}
+.body-footer{
+  @extend  %flex;
+  justify-content: flex-end;
+  @include mq('tablet-wide') {
+    justify-content: space-between;
+  }
+  p{
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+.footer__logo{
+  @include maq('tablet-wide') {
+    img{
+      height: 50px;
+    }
+    position: absolute;
+    left: 0;
+  }
+}
+.footer__copi{
+  @include adaptiv-font(14,8);
+  align-self: flex-end;
+  @include maq('tablet-wide') {
+    width: 53%;
+    text-align: right;
+  }
+}
+.footer__polit{
+  font-size: 14px;
+  @include adaptiv-font(14,10);
+  align-self: flex-end;
+  a{
+    text-decoration: underline;
+    color: initial;
+  }
+  @include maq('tablet-wide') {
+    width: 48%;
+  }
+}
+.footer__labs{
+  align-self: flex-end;
+  @include maq('tablet-wide') {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.footer__pfone{
+  align-self: center;
+  span{
+    @include adaptiv-font(24,14);
+    font-weight: 800;
+  }
+  a{
+    color: initial;
+  }
+  @include mq('tablet-wide') {
+    a{
+      display: block;
+    }
+  }
+
+}

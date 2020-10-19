@@ -1,0 +1,137 @@
+.reviews{
+  padding: 50px 0;
+  @include mq('tablet-wide') {
+    padding: 125px 0;
+  }
+}
+.body-reviews{
+  position: relative;
+  height: 100%;
+}
+
+.reviews__title{
+  padding-bottom: 10px;
+  position: relative;
+  @include adaptiv-margin-bottom(140, 50);
+  @include maq('tablet-wide') {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+
+
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 5px;
+    background: $color1;
+    z-index: 9;
+
+  }
+  @include mq('tablet-wide') {
+    padding-bottom: 25px;
+    margin-bottom: 120px;
+    &:after {
+      width: 150px;
+    }
+  }
+}
+
+.reviews-container {
+  width: 100%;
+  height: 100%;
+}
+
+.reviews-slide {
+  padding: 30px 15px 15px 15px;
+}
+.reviews-slide-body{
+  width: 100%;
+  border: 5px solid $color1;
+  border-radius: 50px;
+  padding: 15px;
+  @extend %flex;
+  justify-content: space-between;
+}
+.reviews-slide-body__info-man{
+  @include maq('tablet-wide') {
+    width: 34%;
+  }
+  width: 24%;
+}
+.reviews-slide-body__descrioptin-man{
+  width: 70%;
+  @include maq('tablet-wide') {
+    width: 60%;
+  }
+}
+
+.info-man__img{
+  width: fit-content;
+  position: relative;
+  margin-top: -45px;
+  margin-left: -20px;
+  padding: 15px;
+  border: 5px solid #f9b70f;
+  border-radius: 50%;
+  background: #fff;
+  img{
+    z-index: 3;
+    position: relative;
+  }
+}
+.bg-white{
+  position: absolute;
+  width: 176px;
+  height: 129px;
+  z-index: 1;
+  top: 15%;
+  left: 0;
+  border-radius: 50%;
+
+}
+.info-man__stars{
+  position: relative;
+  z-index: 3;
+  margin-top: -13px;
+}
+.info-man__position{
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 9px;
+}
+.info-man__date{
+  font-size: 12px;
+  text-align: center;
+}
+.reviews-slide-body__descrioptin-man{
+  position: relative;
+  z-index: 3;
+}
+.descrioptin-man__title{
+  margin-bottom: 10px;
+}
+.descrioptin-man__FIO{
+  margin-bottom: 14px;
+}
+.descrioptin-man__text{
+  font-size: 12px;
+}
+.reviews-button-next{
+  @include maq('tablet-wide') {
+    display: none;
+  }
+  @include mq('tablet-wide') {
+    left: 12%;
+  }
+  @media only screen and ( min-width: 1800px){
+    left: 22%;
+  }
+}
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+  content: none;
+}

@@ -16,7 +16,7 @@
   width: 100%;
   height: 200px;
   @include mq('tablet-wide') {
-    height: 600px;
+    height: auto;
   }
 }
 #map{
@@ -31,10 +31,15 @@
   background:  no-repeat left center;
   text-transform: uppercase;
   margin-bottom: 15px;
+  padding-top: 8px;
   &:not(:first-child){
-    margin-top: 45px;
+    margin-top: 20px;
   }
-
+  @include mq('tablet-wide') {
+    &:not(:first-child){
+      margin-top: 45px;
+    }
+  }
 }
 .body-contacts__subtile{
   background:  no-repeat left center;
@@ -76,14 +81,19 @@
   &:last-child{
     margin-bottom: 0px;
   }
+  padding-top: 8px;
+  @include maq('tablet-wide') {
+
+  }
 }
 
 .body-contacts__soc{
   margin-top: 25px;
+  a{
+    margin-right: 20px;
+  }
   @include mq('tablet-wide') {
     margin-top: 90px;
-    a{
-      margin-right: 20px;
-    }
+
   }
 }
